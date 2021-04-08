@@ -2,14 +2,13 @@
 <html>
 
 <head>
-    <title>Chad Nickel MidTerm Exam</title>
+    <title>Chad Nickel Midterm Exam</title>
 </head>
 <style>
     * {
         margin: 0px;
         padding: 0px;
         position: relative;
-
     }
 
     body,
@@ -61,35 +60,20 @@
 
     .three-column {
         display: grid;
-        grid-template-columns: 1.5fr 9fr 1.5fr;
+        grid-template-columns: 1.28fr 9fr 0fr;
         background-color: #F4F1BB;
 
     }
 
-    /* .c1 {
+    .c1 {
         min-width: 165px;
-    } */
+    }
 
     .c1,
     .c3 {
 
-        background-color: #F4F1BB;
+        background-color:  #F4F1BB;
 
-    }
-
-    .left-nav>li>a {
-        display: block;
-
-        padding: 15px 0px 15px 20px;
-        background-color: #F4F1BB;
-        text-align: left;
-        font-weight: bold;
-        text-decoration: none;
-        transition-duration: 0.7s;
-    }
-
-    .left-nav>li>a:hover {
-        background-color: #E6EBE0;
     }
 
     .txt-center {
@@ -105,43 +89,76 @@
         border-bottom: 1px solid black;
         padding-bottom: 15.6px;
     }
-    .txt-center-c2-2 {
-        text-align: center;
-
-        
-        padding-bottom: 15.6px;
-    }
 
 
     .left-nav {
         list-style-type: none;
     }
 
+    .left-nav>li>a {
+        display: block;
 
+        padding: 15px 0px 15px 20px;
+        background-color:  #F4F1BB;
+        text-align: left;
+        font-weight: bold;
+        text-decoration: none;
+        transition-duration: 0.7s;
+    }
+
+    .left-nav>li>a:hover {
+        background-color: #E6EBE0;
+    }
 
     .c2 {
         padding: 10px;
         display: grid;
         grid-gap: 1.8em;
-        grid-template-columns: repeat(5, .8fr);
+        grid-template-columns: repeat(4, 1.2fr);
         grid-auto-rows: min-content;
         /* grid-template-rows: .8fr 3fr 3fr 3fr; */
     }
 
     .content-h2 {
-        grid-column: 1 / 6;
+        grid-column: 1 / 5;
         height: 27px;
         width: 100%;
     }
 
     .img-center>img {
-        width: auto;
-        height: 195px;
-        object-fit: fill;
+        width: 90%;
+        height: auto;
+        object-fit: cover;
         align-items: center;
     }
 
+    .contact-form {
+        align-content: center;
+        width: 500px;
+        height: 500px;
+        margin: 100px auto;
+    }
 
+    .contact-input {
+        width: 90%;
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .button {
+        width: 70px;
+        height: 25px;
+        margin-left: 5px;
+        margin-top: 2px;
+        transition-duration: 0.4s;
+    }
+
+    .button:hover {
+        background-color: #4CAF50;
+        /* Green */
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
     .img {
         width: auto;
         height: 150px;
@@ -160,34 +177,26 @@
                 <li><a href="./about_us.html">About Us</a></li>
                 <li><a href="./contact_us.html">Contact Us</a></li>
                 <li><a href="./gallery.html">Gallery</a></li>
+           
                 <li><a href="./login.html">Login</a></li>
             </ul>
         </div>
-        <div class="c2 ">
-            <h2 class="content-h2 txt-center-c2">Product Catalog</h2>
-            <p class="content-h2 txt-center-c2-2">Drinking coffee is a natural habit for any Italian person. Coffee is a strong
-                part of our culture, and we used to drink it since we were little more than children. Usually for
-                Italians coffee is more than something to drink because it’s an important moment in our everyday
-                routine. In fact, we take it several times a day, even though we know that this is an unhealthy habit.
-                This is probably the reason why we don’t see another type of coffee preparations like real coffee.
-                Italian coffee generally called espresso, is simply the coffee, and it is better than the drip coffee
-                because of its natural and strong taste and the fact that it contains less caffeine (“Caffeine”).
-            </p>
-            <div class="img-center box-shadow"> <img src="img/image_1.jpeg"></div>
-            <div class="img-center box-shadow"> <img src="img/image_2.jpeg"></div>
-            <div class="img-center box-shadow"> <img src="img/image_3.jpeg"></div>
-            <div class="img-center box-shadow"> <img src="img/image_4.jpeg"></div>
-            <div class="img-center box-shadow"> <img src="img/image_5.jpeg"></div>
-
-
+        <div>
+            <h2 class="txt-center">Contact Us</h2>
+            <form class="contact-form">
+                <input placeholder="First Name" type="text" id="first-name" class="contact-input box-shadow">
+                <input placeholder="Last Name" type="text" id="last-name" class="contact-input box-shadow">
+                <input placeholder="Email" type="email" id="email" class="contact-input box-shadow">
+                <button onClick="contact.goToHome()" class="button" type="button">Submit</button>
+            </form>
         </div>
-        <div class="c3">
-            <h2 class="txt-center">Recent Product</h2>
-        </div>
+
     </div>
     <div class="r3">
         For educational purpose only! No orders shall be fulfilled
     </div>
+
+    <script type="text/javascript" src="./js/contact.js"></script>
 </body>
 
 </html>
